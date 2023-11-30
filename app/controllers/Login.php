@@ -27,6 +27,7 @@ class Login extends Controller
           if (!empty($row)) {
                $_SESSION['login'] = true;
                $_SESSION['user_nama'] = $row['user_nama'];
+               $_SESSION['user_role'] = $row['user_role'];
                header('location:' . URL . '/dashboard');
           } else {
                $_SESSION['login'] = false;
