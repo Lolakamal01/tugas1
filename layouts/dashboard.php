@@ -42,11 +42,13 @@
 						<img class="icon" src="<?php echo AST; ?>/img/menu.png" alt=""> Golongan
 					</a>
 				</li>
+				<?php if ($_SESSION['user_role'] < 2) { ?>
 				<li>
 					<a href="<?php echo URL; ?>/users">
-						<img class="icon" src="<?php echo AST; ?>/img/menu.png" alt=""> Users
+						<img class="icon" src="<?php echo AST; ?>/img/user.png" alt=""> Users
 					</a>
 				</li>
+				<?php } ?>
 				
 				<li>
 					<a href="<?php echo URL; ?>/dashboard/logout">
